@@ -4,6 +4,7 @@ using UnityEngine.Rendering;
 using Unity.Barracuda;
 using System;
 
+#if CJM_BARRACUDA_INFERENCE
 namespace CJM.BarracudaInference.ImageClassification
 {
     public class MultiClassImageClassifier : BarracudaModelRunner
@@ -284,3 +285,4 @@ namespace CJM.BarracudaInference.ImageClassification
         }
     }
 }
+#endif
