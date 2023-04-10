@@ -1,7 +1,8 @@
 {
     "name": "CJM.BarracudaInference.ImageClassification",
     "references": [
-        "Unity.Barracuda"
+        "Unity.Barracuda",
+        "CJM.BarracudaInference"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
