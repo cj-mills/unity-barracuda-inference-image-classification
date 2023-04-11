@@ -40,7 +40,7 @@ For Unity versions older than 2021.1, add the Git URL to the `manifest.json` fil
 ```json
 {
   "dependencies": {
-    "com.cj-mills.barracuda-inference-yolox": "https://github.com/cj-mills/unity-barracuda-inference-image-classification.git",
+    "com.cj-mills.barracuda-inference-image-classification": "https://github.com/cj-mills/unity-barracuda-inference-image-classification.git",
     // other dependencies...
   }
 }
