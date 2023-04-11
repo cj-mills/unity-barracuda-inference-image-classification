@@ -6,6 +6,12 @@ https://user-images.githubusercontent.com/9126128/231021257-05aaed14-5302-4df1-b
 
 
 
+## Demo Project
+
+* **GitHub Repository:** [barracuda-image-classification-demo](https://github.com/cj-mills/barracuda-image-classification-demo)
+
+
+
 ## Features
 
 - Utilizes Unity's Barracuda engine for efficient inference
