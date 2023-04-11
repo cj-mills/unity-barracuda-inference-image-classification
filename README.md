@@ -2,8 +2,6 @@
 This Unity package extends the functionality of the barracuda-inference-base package to perform image classification using computer vision models. 
 
 ## Demo Video
-
-
 https://user-images.githubusercontent.com/9126128/231021257-05aaed14-5302-4df1-b266-120575ac29ad.mp4
 
 
