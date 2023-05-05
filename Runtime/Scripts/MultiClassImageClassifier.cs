@@ -14,19 +14,23 @@ namespace CJM.BarracudaInference.ImageClassification
         [Tooltip("Interval (in frames) for unloading unused assets with Pixel Shader backend")]
         [SerializeField] private int pixelShaderUnloadInterval = 100;
 
-
+        // A counter for the number of frames processed.
         private int frameCounter = 0;
 
         // Indicates if the system supports asynchronous GPU readback
         private bool supportsAsyncGPUReadback = false;
 
+        // The name of the transpose layer.
         private const string TransposeLayer = "transpose";
+        // The softmax layer.
         private string SoftmaxLayer = "softmaxLayer";
+        // The name of the output layer.
         private string outputLayer;
 
         // Helper class for deserializing class labels from the JSON file
         private class ClassLabels { public string[] classes; }
 
+        // The class labels
         private string[] classes;
 
         // Texture formats for output processing
@@ -182,6 +186,7 @@ namespace CJM.BarracudaInference.ImageClassification
         /// </summary>
         public float[] CopyOutputToArray()
         {
+            // Retrieve the output tensor from the engine
             using (Tensor output = engine.PeekOutput(outputLayer))
             {
                 if (workerType == WorkerFactory.Type.PixelShader)
@@ -193,6 +198,7 @@ namespace CJM.BarracudaInference.ImageClassification
                         frameCounter = 0;
                     }
                 }
+                // Download the data from the tensor
                 return output.data.Download(output.shape);
             }
         }
@@ -205,6 +211,7 @@ namespace CJM.BarracudaInference.ImageClassification
         {
             using (Tensor output = engine.PeekOutput(outputLayer))
             {
+                // Store output tensor data in a RenderTexture
                 output.ToRenderTexture(outputTextureGPU);
             }
         }
@@ -225,6 +232,7 @@ namespace CJM.BarracudaInference.ImageClassification
 
             AsyncGPUReadback.Request(outputTextureGPU, 0, textureFormat, OnCompleteReadback);
 
+            // Extract the output tensor data from the texture
             Color[] outputColors = outputTextureCPU.GetPixels();
             return outputColors.Select(color => color.r).ToArray();
         }
