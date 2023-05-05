@@ -12,6 +12,12 @@ https://user-images.githubusercontent.com/9126128/231305884-865e656c-06df-42c6-a
 
 
 
+## Code Walkthrough
+
+* [Code Walkthrough: Unity Barracuda Inference Image Classification Package](https://christianjmills.com/posts/unity-barracuda-inference-image-classification-walkthrough/)
+
+
+
 ## Features
 
 - Utilizes Unity's Barracuda engine for efficient inference
