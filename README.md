@@ -57,3 +57,11 @@ For Unity versions older than 2021.1, add the Git URL to the `manifest.json` fil
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](Documentation~/LICENSE) file for details.
+
+<!-- relocated-posts:start (projected by the relocate verb; never edit by hand) -->
+## Retired posts
+
+The posts that accompanied this repository were retired from [christianjmills.com](https://christianjmills.com) and now live here:
+
+- [Code Walkthrough: Unity Barracuda Inference Image Classification Package](retired-post/unity-barracuda-inference-image-classification-walkthrough/README.md) (2023-05-06)
+<!-- relocated-posts:end -->
